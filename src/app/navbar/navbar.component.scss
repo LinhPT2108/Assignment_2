@@ -1,0 +1,120 @@
+.logo-reponsive {
+  display: none;
+}
+@media (max-width: 991px) {
+  .container-fluid {
+    padding: 0;
+  }
+  .nav-item_sign {
+    background: none !important;
+  }
+  .nav-item_sign a {
+    color: #002ec4 !important;
+  }
+  .navbar-collapse {
+    // background-color: #cbcbcb;
+    margin: 6px 0;
+    z-index: 99;
+    align-items: center;
+  }
+
+  .logo-reponsive {
+    display: block;
+    padding-right: 12px;
+  }
+  .logo {
+    display: none;
+  }
+  .nav-item {
+    width: 100%;
+    padding-left: 12px;
+  }
+  .navbar-toggler {
+    margin-left: 12px;
+  }
+  .dropdown-menu {
+    width: 25%;
+  }
+
+  .login-body {
+    height: 850px;
+  }
+  .signUpBody {
+    height: 1200px;
+  }
+}
+@media (max-width: 480px) {
+  .footer-content_text {
+    font-size: 0.8rem;
+  }
+}
+@keyframes showDropMenu {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/*Keyframes*/
+@keyframes SwiftSlide {
+  100% {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+@keyframes SwiftSlideToRight {
+  100% {
+    opacity: 0;
+    margin-right: -30px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    margin-top: 0;
+  }
+  .navbar .nav-item:hover .nav-link {
+    color: #002ec4;
+  }
+  .navbar .dropdown-menu.fade-down {
+    top: 80%;
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%;
+  }
+  .navbar .dropdown-menu.fade-up {
+    top: 180%;
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    transition: 0.3s;
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    transform: rotateX(0deg);
+  }
+}
+
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+.h-custom {
+  height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+.form-check_remember {
+  padding-left: 2.5rem;
+  padding-right: 0;
+}

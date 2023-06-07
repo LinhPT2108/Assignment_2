@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg bg-light position-sticky">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav mb-lg-0 align-items-center fs-6">
+            <li class="nav-item" style="max-width: 100px;">
+                <a class="nav-link logo-reponsive" routerLink="home" aria-current="page" href="#"><img class="w-100"
+                        src="./assets/image/QUIZ-3D.png" alt=""></a>
+            </li>
+        </ul>
+        <div class="collapse navbar-collapse fs-6 fw-bold align-items-center" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                <li class="nav-item" style="max-width: 100px;">
+                    <a class="nav-link active logo" routerLink="home" aria-current="page" href="#"><img class="w-100"
+                            src="./assets/image/QUIZ-3D.png" alt=""></a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#" routerLink="home">Trang chủ</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#" routerLink="question">Bài thi</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#" routerLink="about">Giới thiệu</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#" routerLink="contact">Liên hệ</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-center fs-6">
+                <li class="nav-item nav-item_sign mx-0 bg-warning">
+                    <a class="nav-link" href="#" routerLink="login">Đăng nhập</a>
+                </li>
+                <li class="nav-item nav-item_sign mx-0 bg-warning">
+                    <a class="nav-link" routerLink="signup" href="#">Đăng ký</a>
+                </li>
+                <li class="nav-item mx-0">
+                    <select class="form-select w-auto form-select-lg border-0 bg-body fs-6" name="" id="">
+                        <!-- <option *ngFor="let language of list_languages" value={{language}}>{{language}}</option>
+                        <option value="">Tiếng Việt</option>
+                        <option value="">English</option> -->
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,12 @@
+.card-img-top {
+  width: 100px;
+}
+.card-text {
+  text-align: justify;
+}
+.card-img-top {
+  transition: all 0.5s;
+}
+.card-img-top:hover {
+  transform: scale(1.1);
+}

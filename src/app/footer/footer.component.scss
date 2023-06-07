@@ -1,0 +1,21 @@
+.footer {
+  background-color: #f8f9fa;
+}
+.card {
+  border: none;
+  background: none;
+}
+.outer-link {
+  text-decoration: none;
+  color: rgb(5, 65, 121) !important;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+.outer-link:hover {
+  text-decoration: underline;
+  color: rgb(29, 155, 4) !important;
+  // font-weight: 700;
+}
+.card-text {
+  text-align: justify;
+}
