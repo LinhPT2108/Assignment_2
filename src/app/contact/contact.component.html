@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class=" container  container-contact">
+        <div class="d-flex flex-column pt-4">
+            <h2 class="title text-success">Thông tin liên hệ </h2>
+            <p class="card-text fs-4 text-intro">Bạn hãy để lại thông tin liên hệ như họ và tên, email của bạn và nội
+                dung mà bạn đang gặp phải khi thao tác với website của chúng tôi hoặc có bất cứ thắc mắc gì vui lòng bạn
+                có thể để lại phản hồi. <br>
+                Chúng tôi sẽ sớm liên hệ lại với bạn thông qua nội dung mà bạn đã cung cấp bên dưới ! <br>
+                Vui lòng điền đầy đủ thông tin. <br>
+                Trân trọng !
+            </p>
+        </div>
+        <div class="card mt-4">
+            <div class="card-header text-primary fw-bold fs-4">
+                Thông tin cá nhân
+            </div>
+            <div class="card-body">
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="mb-3">
+                        <label class="form-label" for="full-name">Họ và tên</label>
+                        <input class="form-control" id="full-name" type="text" placeholder="Nhấn vào để nhập họ tên"
+                            data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="full-name:required">Bạn chưa nhập tên.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="mail-customer">Email</label>
+                        <input class="form-control" id="mail-customer" type="email" placeholder="Nhấn vào để nhập Email"
+                            data-sb-validations="required, email" />
+                        <div class="invalid-feedback" data-sb-feedback="mail-customer:required">Email không được bỏ
+                            trống.</div>
+                        <div class="invalid-feedback" data-sb-feedback="mail-customer:email">Email không đúng định dạng.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="content-contact">Nội dung</label>
+                        <textarea class="form-control" id="content-contact" type="text"
+                            placeholder="Nhấn vào để nhập nội dung" style="height: 10rem;"
+                            data-sb-validations="required"></textarea>
+                        <div class="invalid-feedback" data-sb-feedback="content-contact:required">Message is required.
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">Đã gửi thành công !</div>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Lỗi !</div>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-lg disabled w-25" id="submitButton"
+                            type="submit">Gửi</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

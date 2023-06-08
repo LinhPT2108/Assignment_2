@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="container mt-3 mb-3">
+        <div class="row">
+            <div class="clock fs-1 text-center"><i class="bi bi-alarm"></i>
+                02:56
+            </div>
+            <div class="card mb-3 px-0" *ngFor="let question of randomListQuestion(); let i =index">
+                <div class="card-header fw-bolder bg-info text-white">
+                    <div class="float-start">Câu {{i +1}}: {{question.Text}}</div>
+                    <div class="float-end">Question {{i +1}} of 10</div>
+                </div>
+                <ul class="list-group list-group-flush px-3">
+                    <div class="form-check form-check-inline" *ngFor='let answer of question.Answers'>
+                        <input class="form-check-input" type="radio" name="{{idSubject}}-q{{i+1}}"
+                            id="{{idSubject}}-q{{i+1}}{{answer.Id}}" value="{{answer.Id}}">
+                        <label class="form-check-label"
+                            for="{{idSubject}}-q{{i+1}}{{answer.Id}}">{{answer.Text}}</label>
+                    </div>
+                </ul>
+            </div>
+            <div class="question-footer">
+                <button type="button" class="btn btn-info float-start">Submit</button>
+                <label for="" class="bg-success float-end record">Điểm 0/10</label>
+            </div>
+        </div>
+    </div>
+</div>

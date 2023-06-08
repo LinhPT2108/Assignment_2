@@ -1,0 +1,75 @@
+<div class="contaier-fluid">
+    <div class="container mt-4 mb-4">
+
+        <div class="col-xs-12 col-12 mb-3">
+            <div id="slideShowBody" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#slideShowBody" data-bs-slide-to="0"
+                        class="active controll-slide" id="control-slide" aria-current="true"
+                        aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#slideShowBody" data-bs-slide-to="1" class="controll-slide"
+                        id="control-slide" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#slideShowBody" data-bs-slide-to="2" class="controll-slide"
+                        id="control-slide" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div data-bs-interval="2000" class="carousel-item active">
+                        <img src="./assets/image/58-developer.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="text-dark">Hệ thống chấm điểm tự động</h5>
+                            <p class="text-primary">Trong thời gian đang thực hiện bài thi, hệ
+                                thống sẽ tự động thống kê</p>
+                        </div>
+                    </div>
+                    <div data-bs-interval="2000" class="carousel-item">
+                        <img src="./assets/image/on-bai.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="text-dark">Ôn lại các kiến thức đã học</h5>
+                            <p class="text-primary"> Ngay khi hoàn tất bài thi (nhấn nộp bài), phần mềm sẽ tổng kết đáp
+                                án các câu hỏi của
+                                bài
+                                thi, và tự động
+                                chấm điểm ngay</p>
+                        </div>
+                    </div>
+                    <div data-bs-interval="2000" class="carousel-item">
+                        <img src="./assets/image/Unlimited_2.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="text-dark">Thực hiện kiểm tra không giới hạn</h5>
+                            <p class="text-primary">Bạn có thể làm bài quiz nhiều lần để củng cố kiến thức
+                                và cố gắng cho những lần thi sau.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#slideShowBody"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slideShowBody"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <ul class="list-group">
+            <h3 class="list-group-item border-0 p-0 text-dark">Danh sách cách khóa học</h3>
+        </ul>
+        <div class="row">
+            <div class="col-xxl-3 col-xl-4 col-md-6 col-xs-12 mt-4" *ngFor="let s of subjects">
+                <div class="card text-center">
+                    <img class="card-img-top" src="./assets/image/{{s.Logo}}" alt="Title">
+                    <div class="card-body">
+                        <p class="card-title text-dark">{{s.Name}}</p>
+                    </div>
+                    <div class="mb-4">
+                        <button type="button" class="btn btn-primary mx-2" routerLink="/cau-hoi"
+                            (click)="handleQuestion(s.Id)">Thi ngay</button>
+                        <button type="button" class="btn btn-warning mx-2">Xem chi tiết</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
