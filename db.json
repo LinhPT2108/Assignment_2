@@ -2,7 +2,7 @@
   "student": [
     {
       "username": "teonv",
-      "password": "iloveyou",
+      "password": "123123",
       "fullname": "Nguyễn Văn Tèo",
       "email": "teonv@fpt.edu.vn",
       "gender": "true",
@@ -12,7 +12,7 @@
     },
     {
       "username": "pheonv",
-      "password": "iloveyou",
+      "password": "123123",
       "fullname": "Nguyễn Văn Chí Phèo",
       "email": "pheonv@fpt.edu.vn",
       "gender": "true",
@@ -22,13 +22,129 @@
     },
     {
       "username": "nopt",
-      "password": "iloveyou",
+      "password": "123123",
       "fullname": "Phạm Thị Nở",
       "email": "nopt@fpt.edu.vn",
       "gender": "false",
       "birthday": "1993-05-15",
       "schoolfee": "2000000",
       "marks": "0"
+    },
+    {
+      "username": "2132132",
+      "password": "rrrr",
+      "id": "4322424324"
+    },
+    {
+      "username": "2132132",
+      "password": "rrrr",
+      "id": "yfXU16s"
+    },
+    {
+      "username": "123",
+      "password": "gg",
+      "fullname": "gg",
+      "email": "g",
+      "gender": "g",
+      "birthday": "g",
+      "schoolfee": "g",
+      "marks": "5",
+      "id": "Iz7QXVe"
+    },
+    {
+      "username": "123",
+      "password": "gg",
+      "fullname": "gg",
+      "email": "g",
+      "gender": "g",
+      "birthday": "g",
+      "schoolfee": "g",
+      "marks": "5",
+      "id": "7BhI0hf"
+    },
+    {
+      "username": "123",
+      "password": "gg",
+      "fullname": "gg",
+      "email": "g",
+      "gender": "g",
+      "birthday": "g",
+      "schoolfee": "g",
+      "marks": "5",
+      "id": "_e7cyb8"
+    },
+    {
+      "username": "123",
+      "password": "gg",
+      "fullname": "gg",
+      "email": "g",
+      "gender": "g",
+      "birthday": "g",
+      "schoolfee": "g",
+      "marks": "5",
+      "id": "hjfMcFd"
+    },
+    {
+      "username": "123",
+      "password": "gg",
+      "fullname": "gg",
+      "email": "g",
+      "gender": "g",
+      "birthday": "g",
+      "schoolfee": "g",
+      "marks": "5",
+      "id": "JQsB36w"
+    },
+    {
+      "username": "LinhPT",
+      "fullname": "phan tuấn linh",
+      "email": "tuanlinh0291@gmail.com",
+      "password": "123132",
+      "id": "o46DIru"
+    },
+    {
+      "username": "LinhPT",
+      "password": "123123",
+      "fullname": "phan Tuấn linh",
+      "email": "tuanlinh0291@gmail.com",
+      "gender": "",
+      "birthday": "",
+      "schoolfee": "",
+      "marks": "",
+      "id": "zSs-7nv"
+    },
+    {
+      "username": "hello",
+      "password": "123123",
+      "fullname": "lolo",
+      "email": "lo123",
+      "gender": "",
+      "birthday": "",
+      "schoolfee": "",
+      "marks": "",
+      "id": "MdcvemN"
+    },
+    {
+      "username": "tr",
+      "password": "tr",
+      "fullname": "tr",
+      "email": "tr",
+      "gender": "",
+      "birthday": "",
+      "schoolfee": "",
+      "marks": "",
+      "id": "E3GHCUS"
+    },
+    {
+      "username": "ttt",
+      "password": "ggg",
+      "fullname": "re",
+      "email": "ggg",
+      "gender": "",
+      "birthday": "",
+      "schoolfee": "",
+      "marks": "",
+      "id": "RW_v90Q"
     }
   ],
   "subjects": [
@@ -133,7 +249,6 @@
       "Logo": "20.png"
     }
   ],
-
   "quizs": [
     {
       "id": "ADAV",
