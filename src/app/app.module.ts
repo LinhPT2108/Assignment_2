@@ -18,6 +18,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { FormsModule } from '@angular/forms';
+import { NotificationComponent } from './notification/notification.component';
+import { ModalAlertComponent } from './modal-alert/modal-alert.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,8 +38,16 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     QuestionsComponent,
+    NotificationComponent,
+    ModalAlertComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

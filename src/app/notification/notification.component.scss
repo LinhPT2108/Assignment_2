@@ -1,0 +1,27 @@
+.notify {
+  height: 100vh;
+}
+.loading {
+  font-size: 100px;
+  animation: rotates infinite linear;
+  transition: all 0.3s;
+}
+.loading::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 6px;
+  border-color: #ccc transparent #ccc transparent;
+  animation: rotate 1.2s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}

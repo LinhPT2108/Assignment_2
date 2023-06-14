@@ -11,36 +11,47 @@
                                     ký
                                     thành viên</p>
 
-                                <form autocomplete="off" class="mx-1 mx-md-4" #register="ngForm"
+                                <form autocomplete="off" class="mx-1 mx-md-4" [formGroup]="register"
                                     (ngSubmit)="registerSubmit(register)">
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
                                             <label class="form-label text-primary fw-bold" for="username">Tài
                                                 khoản</label>
-                                            <input ngModel type="text" name="username" id="username"
-                                                placeholder="Nhấn vào để nhập tài khoản"
-                                                class="form-control form-control-lg text-white bg-dark" />
+                                            <input formControlName="username" [(ngModel)]="username" type="text"
+                                                name="username" id="username" placeholder="Nhấn vào để nhập tài khoản"
+                                                class="form-control form-control-lg text-dark bg-light" />
+                                            <div class="text-danger"
+                                                *ngIf="register.get('username')?.invalid && register.get('username')?.touched">
+                                                <p class="m-0">Tài khoản không được để trống!</p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
-                                            <label class="form-label text-primary fw-bold" for="fullName">Họ và
+                                            <label class="form-label text-primary fw-bold" for="fullname">Họ và
                                                 tên</label>
-                                            <input ngModel type="text" name="fullname" id="fullName"
-                                                placeholder="Nhấn vào để nhập tên"
-                                                class="form-control form-control-lg text-white bg-dark" />
+                                            <input formControlName="fullname" [(ngModel)]="fullname" type="text"
+                                                name="fullname" id="fullname" placeholder="Nhấn vào để nhập tài khoản"
+                                                class="form-control form-control-lg text-dark bg-light" />
+                                            <div class="text-danger"
+                                                *ngIf="register.get('fullname')?.invalid && register.get('fullname')?.touched">
+                                                <p class="m-0">Họ và tên không được để trống!</p>
+                                            </div>
                                         </div>
                                     </div>
-
                                     <div class="d-flex flex-row align-items-center mb-4">
                                         <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                         <div class="form-outline flex-fill mb-0">
                                             <label class="form-label text-primary fw-bold" for="email">Email</label>
-                                            <input ngModel type="email" id="email" name="email"
-                                                placeholder="Nhấn vào để nhập email"
-                                                class="form-control form-control-lg text-white bg-dark" />
+                                            <input formControlName="email" [(ngModel)]="email" type="email" id="email"
+                                                name="email" placeholder="Nhấn vào để nhập email"
+                                                class="form-control form-control-lg text-dark bg-light" />
+                                            <div class="text-danger"
+                                                *ngIf="register.get('email')?.invalid && register.get('email')?.touched">
+                                                <p class="m-0">Email không được để trống!</p>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -49,9 +60,13 @@
                                         <div class="form-outline flex-fill mb-0">
                                             <label class="form-label text-primary fw-bold" for="password">Mật
                                                 khẩu</label>
-                                            <input ngModel type="password" name="password"
-                                                placeholder="Nhấn vào để nhập mật khẩu"
-                                                class="form-control form-control-lg text-white bg-dark" />
+                                            <input formControlName="password" [(ngModel)]="password" type="password"
+                                                name="password" placeholder="Nhấn vào để nhập mật khẩu"
+                                                class="form-control form-control-lg text-dark bg-light" />
+                                            <div class="text-danger"
+                                                *ngIf="register.get('password')?.invalid && register.get('password')?.touched">
+                                                <p class="m-0">Mật khẩu không được để trống!</p>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -63,7 +78,13 @@
                                                 khẩu</label>
                                             <input type="password" name="confirmPassword" id="confirmPassword"
                                                 placeholder="Nhấn vào để nhập lại mật khẩu"
-                                                class="form-control form-control-lg text-white bg-dark" />
+                                                class="form-control form-control-lg text-dark bg-light"
+                                                appMatch="password" />
+
+                                            <div
+                                                *ngIf="register.get('confirmPassword')?.hasError('match') && register.get('confirmPassword')?.touched">
+                                                <p class="m-0">Mật khẩu không khớp!</p>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -76,7 +97,8 @@
                                     </div>
 
                                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                        <button type="submit" class="btn btn-primary btn-lg">Đăng ký</button>
+                                        <button type="submit" class="btn btn-primary btn-lg"
+                                            [disabled]="!username || !fullname|| !email|| !password">Đăng ký</button>
                                     </div>
 
                                 </form>

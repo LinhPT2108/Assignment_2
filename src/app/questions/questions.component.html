@@ -6,12 +6,12 @@
             </div>
             <form #questions="ngForm" (ngSubmit)="submitQuestion(questions)">
                 <div class="card mb-3 px-0" *ngFor="let question of randomListQuestion(); let i =index;">
-                    <div class="card-header fw-bolder bg-secondary bg-opacity-50 text-white">
+                    <div class="card-header question-color bg-opacity-50">
                         <div class="float-start">Câu {{i +1}}: {{question.Text}}</div>
                         <div class="float-end">Question {{i +1}} of 10</div>
                     </div>
                     <ul class="list-group list-group-flush px-3">
-                        <div class="form-check form-check-inline" *ngFor='let answer of question.Answers'>
+                        <div class="form-check form-check-inline answer-line" *ngFor='let answer of question.Answers'>
                             <input class="form-check-input" type="radio" name="{{question.Id}}"
                                 id="{{idSubject}}-q{{i+1}}{{answer.Id}}" value="{{answer.Id}}" ngModel>
                             <label class="form-check-label"
@@ -25,8 +25,8 @@
                     </div>
                 </div>
                 <div class="question-footer">
-                    <button type="submit" class="btn btn-info float-start px-0">Submit</button>
-                    <label *ngIf="true" class="text-success record mx-3 fs-4 fw-bolder align-self-center">Điểm
+                    <button type="submit" class="btn btn-info float-start question-submit px-5 fs-4">Nộp bài</button>
+                    <label *ngIf="isSubmit" class="text-success record mx-3 mt-2 fs-4 fw-bolder align-self-center">Điểm
                         {{marks}}/10</label>
                 </div>
             </form>

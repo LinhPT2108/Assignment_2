@@ -31,6 +31,7 @@
   }
   .navbar-toggler {
     margin-left: 12px;
+    margin-top: 6px;
   }
   .dropdown-menu {
     width: 25%;
@@ -117,4 +118,26 @@
 .form-check_remember {
   padding-left: 2.5rem;
   padding-right: 0;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  transition: 0.4s;
+  width: 100%;
+  z-index: 99;
+}
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 6px 0 !important;
+  }
+}
+.nav-item_sign .nav-link {
+  cursor: pointer;
 }
